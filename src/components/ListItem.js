@@ -1,9 +1,9 @@
 import React from 'react'
 //props passes immutable object()
-const ListItem = (props) => {
+const ListItem = ({note}) => {
   return (
     <li className='ListItem'>
-      <h3>{props.note.body}</h3>
+      <h3>{note.body}</h3>
     </li>
   )
 }
