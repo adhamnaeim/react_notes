@@ -2,7 +2,7 @@ import React from "react"
 
 const Body = () => {
   return (
-    <div>
+    <div className="body">
       <p>the notes app body --body.js--</p>
     </div>
   )
