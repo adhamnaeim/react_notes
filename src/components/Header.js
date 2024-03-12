@@ -3,7 +3,7 @@
 const Header = () => {
 
     return(
-        <div className="Header">
+        <div className="app-header">
             <h1>react notes app</h1>
         </div>
     )
