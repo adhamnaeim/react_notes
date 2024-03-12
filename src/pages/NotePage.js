@@ -25,7 +25,10 @@ const NotePage = () => {
 
       <h1>this is a single note page no.{note?.id}</h1>
       <h3>note body details</h3>
-      <p>{note?.body}</p>
+      <textarea className='NoteTextBox' value={note?.body}>
+
+
+      </textarea>
     </div>
   )
 }
