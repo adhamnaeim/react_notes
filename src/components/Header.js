@@ -4,7 +4,7 @@ const Header = () => {
 
     return(
         <div className="Header">
-            <h1>Sick react notes app --header.js--</h1>
+            <h1>react notes app</h1>
         </div>
     )
 }

@@ -5,7 +5,11 @@ import {Link} from 'react-router-dom'
 const ListItem = ({note}) => {
   return (
     <li className='ListItem'>
-      <Link to={`/note/${note.id}`}><h3>{note.body}</h3></Link>
+      <div className='notes-list-item'>
+        <Link to={`/note/${note.id}`}>
+          <h3>{note.body}</h3>
+        </Link>
+      </div>
     </li>
   )
 }
