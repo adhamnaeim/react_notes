@@ -40,7 +40,13 @@ const NotePage = () => {
   }
 
   let handleSubmit = () => {
-    updateNote()
+    if (noteId !== 'new' && !note.body){
+      deleteNote()
+    }
+    else if (noteId === 'new'){
+      updateNote()
+    }
+
     navigate('/')
   }
 
