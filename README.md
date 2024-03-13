@@ -1,12 +1,33 @@
-# Getting Started with Create React App
+# React Frontend only notes app
+the goal from this project to illustrate my capabilities of developing react applications
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+the following was learnt through the processing mimicking [Dennis Ivy's project](https://www.youtube.com/watch?v=6fM3ueN9nYM):
+- starting a react project from scratch
+- removing boilerplate files and code
+- understanding the file structure of a react project
+- understanding and building parent/child components
+- accessing hardcoded json files using props (rendered immutably)
+- the usage of useParams to fetch dynamic link parameters
+- installing and using react-router-dom for creating routers and dynamic links in JSX (similar to href)
+- the usage of ternary operator(?) and logical AND operator (&&)
+- adding css styling and adding svg icons to app as a react either a standalone or an embedded component
+- usage of json-server for mimicking backend API requests
+- switching from fetching data from static immutable records to using CRUD operations on a json db.
+- usage of setNavigate that redirects the user based on the component's functions needs.
+- usage of useState and useEffect hooks for dealing with API requests asynchronously
 
-## Available Scripts
+## Running app in development
 
-In the project directory, you can run:
+### 1. `npm install`
+this will ensure the download of all the needed dependencies needed for react\
+and the json-server used to mimick the backend based on the package.json config file.
 
-### `npm start`
+### 2. `npm run server`
+crucial step for running the json server that's responsible for handling the api calls
+with the db.json file.\
+json server is running on http://localhost:1337
+
+### 3.`npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -14,12 +35,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+## running app in production
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 1. `npm install`
+this will ensure the download of all the needed dependencies needed for react 
+and the json-server used to mimick the backend based on the package.json config file.
 
-### `npm run build`
+### 2.`npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -27,44 +49,13 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3. `npm install -g serve`
+serving the production build locally
 
-### `npm run eject`
+### 4. `npm run server`
+crucial step for running the json server that's responsible for handling the api calls
+with the db.json file.\
+json server is running on http://localhost:1337
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 5. `serve -s build -p 5000`
+running the production build on http://localhost:5000
