@@ -87,8 +87,6 @@ const NotePage = () => {
 
       </div>
 
-      <h1>this is a single note page no.{note?.id}</h1>
-      <h3>note body details</h3>
       <textarea onChange={(e)=> (setNote({...note,'body':e.target.value}))} className='NoteTextBox' value={note?.body}>
 
 

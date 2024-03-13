@@ -2,13 +2,18 @@
   "notes": [
     {
       "id": "2",
-      "body": "Bob from bar down the \n\n- Take out trash\n- Eat food DONE",
-      "updated": "2024-03-13T02:28:24.363Z"
+      "body": "grocery list\n\n-2 banana\n-4 apple\n-5 avocado\n-eggs",
+      "updated": "2024-03-13T19:13:42.316Z"
     },
     {
       "id": "3",
-      "body": "Wash car done",
-      "updated": "2024-03-13T02:28:19.824Z"
+      "body": "rhombus.ai assessment for the Software Engineering role 2024\n\n- Pandas Data Type Inference and Conversion\n- Django\n- React",
+      "updated": "2024-03-13T19:15:52.039Z"
+    },
+    {
+      "id": "67d4",
+      "body": "morning routine\n\n-mediation\n-tidying bed\n-checking emails",
+      "updated": "2024-03-13T19:16:39.502Z"
     }
   ]
 }
