@@ -1,3 +1,7 @@
+/**
+ * responsible for fetching the notes from the db.json and loading them through a mapping function
+ * this component usesstate and useeffect hooks for fetching data from the json-server asynchronously
+ */
 import React, {useEffect, useState} from 'react'
 import ListItem from '../components/ListItem'
 import AddButton from '../components/AddButton'

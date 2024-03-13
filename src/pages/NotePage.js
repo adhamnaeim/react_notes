@@ -1,3 +1,7 @@
+/**
+ * responsible for loading a single note full body and allows user to edit the note on the fly
+ * this component also uses usestate and useeffect hooks for CRUD operations asynchronously
+ */
 import React, {useState, useEffect} from 'react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import { ReactComponent as ArrowLeft} from '../assets/arrow-left.svg'
@@ -51,6 +55,10 @@ const NotePage = () => {
   }
 
   let handleSubmit = () => {
+    /**
+     * there is two states for a note. a note with an id param or a note with a new param
+     * the following if conditions gives the functionality of deleting,updating and creating new notes 
+     */
     if (noteId !== 'new' && !note.body){
       deleteNote()
     }
@@ -74,6 +82,7 @@ const NotePage = () => {
             <ArrowLeft onClick={handleSubmit}/>
           </Link>
         </h3>
+        {/* ternary function that checks if the note is a newly created one and changes the button text from Done to Delete */}
         {noteId !== 'new' ? (
           <button onClick={deleteNote}>
             DELETE
@@ -86,7 +95,8 @@ const NotePage = () => {
         )}
 
       </div>
-
+      
+      {/* a text area that is automatically filled with the note's body and automatically updates the note body on change */}
       <textarea onChange={(e)=> (setNote({...note,'body':e.target.value}))} className='NoteTextBox' value={note?.body}>
 
 

@@ -1,3 +1,6 @@
+/**
+ * the main app component that gets supplied to index.js
+ */
 import {
   BrowserRouter as Router,
   Route,
@@ -16,6 +19,7 @@ function App() {
         <div className="app">
           <Header />
           <Routes>
+            {/* a router for the two primary page components */}
             <Route path="/"  element={<NotesListPage/>}/>
             <Route path="/note/:noteId" element={<NotePage/>}/>
           </Routes>
