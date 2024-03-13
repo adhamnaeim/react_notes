@@ -12,7 +12,18 @@ const NotePage = () => {
     getNote()
   }, [noteId])
 
+  let createNote = async () => {
+    await fetch(`http://localhost:1337/notes/`,{
+      method:'POST',
+      headers:{
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({...note, 'updated':new Date()})
+    })
+  }
+
   let getNote = async () => {
+    if (noteId==='new') return
     let response = await fetch(`http://localhost:1337/notes/${noteId}`)
     let data = await response.json()
     setNote(data)
@@ -43,8 +54,11 @@ const NotePage = () => {
     if (noteId !== 'new' && !note.body){
       deleteNote()
     }
-    else if (noteId === 'new'){
+    else if (noteId !== 'new'){
       updateNote()
+    }
+    else if (noteId === 'new' && note.body !== null){
+      createNote()
     }
 
     navigate('/')
