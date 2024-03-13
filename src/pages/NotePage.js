@@ -74,10 +74,16 @@ const NotePage = () => {
             <ArrowLeft onClick={handleSubmit}/>
           </Link>
         </h3>
+        {noteId !== 'new' ? (
+          <button onClick={deleteNote}>
+            DELETE
+          </button>
 
-        <button onClick={deleteNote}>
-          DELETE
-        </button>
+        ): (
+          <button onClick={handleSubmit}>
+            Done
+          </button>          
+        )}
 
       </div>
 
